@@ -1,0 +1,553 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'PlumbCondensed', 'TrebuchetMS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #ffffff;
+}
+.header {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    background-image: url('../img/header__main.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-bottom: 30px;
+    height: 655px;
+    .useful {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        padding: 0px 213px;
+        background-color: #484848;
+        flex-wrap: wrap;
+        .useful__info {
+            font-family: 'PlumbCondensed';
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            min-height: 35px;
+            line-height: 17px;
+            color: #e6e6e6;
+            min-width: 200px;
+            white-space: nowrap;
+            .red-text {
+                color: #dc1857;
+            }
+        }
+    }
+    .snils_su {
+        display: flex;
+        z-index: 10;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 90px;
+        font-size: 44px;
+        font-weight: 700;
+        color: #ffffff;
+        background: rgb(65,78,123);
+        background: linear-gradient(360deg, rgba(65,78,123,1) 0%, rgba(114,145,179,1) 100%);
+        img {
+            margin-right: 10px;
+        }
+        .red-text {
+            color: #f5135c;
+            margin-left: 2px;
+        }
+    }
+    .header__main {
+        position: relative;
+        z-index: 0;
+        margin-top: -80px;
+        margin-bottom: 60px;
+    }
+    .block__info {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 8px;
+        background-color: rgba(246, 249, 251, 0.7);
+        font-size: 18px;
+        color: #383838;
+        box-shadow: 0px 10px 16px 0px rgba(34, 60, 80, 0.2);
+        .header__info__block:first-child {
+            border-left: 2px solid;
+        }
+        .header__info__block {
+            font-family: 'PlumbCondensed';
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            min-width: 200px;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            border-right: 2px solid;
+            border-image-source: linear-gradient(360deg, rgba(0,0,0,0) 0%, rgba(119,119,120,1) 40%, rgba(119,119,120,1) 60%, rgba(0,0,0,0) 100%);
+            border-image-slice: 1;
+            span {
+                border-bottom: 2px solid rgba(246, 249, 251, 0.7);
+            }
+            span:hover {
+                border-bottom: 2px solid #f5135c;
+            }
+            details {
+                display: block;
+                position: relative;
+            }
+            details > summary {
+                list-style: none;
+            }
+            details summary:after {
+                position: absolute;
+                content: url('../img/pointer_down.png');
+                left: 130px;
+                top: -3px;
+            }
+            details[open] summary ~ *{ 
+                animation: sweep .5s ease-in-out;
+            }
+            details[open] summary { 
+                margin-bottom: 10px;
+            }
+            details p { 
+                text-align: center;
+                vertical-align: middle;
+                color: #000000;
+                background-color: rgba(246, 249, 251, 0.7);
+                margin: 0;
+                padding-top: 10px;
+                height: 37px;
+              }
+        }
+    }
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .snils__definition {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .whats_this {
+            color: #ffffff;
+            font-size: 29px;
+            padding: 12px 335px 9px 335px;
+            background-color: #f5135c;
+            margin-bottom: 35px;
+            max-width: 1150px;
+            white-space: nowrap;
+            text-align: center;
+        }
+        p {
+            font-family: 'TrebuchetMS';
+            font-weight: normal;
+            max-width: 1150px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .snils_uses {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            max-width: 1100px;
+            margin-bottom: 50px;
+            img {
+                margin-right: 50px;
+            }
+            ul {
+                font-family: 'TrebuchetMS';
+                font-weight: 600;
+                list-style-position: outside;
+                list-style-image: url('../img/ok_icon.png');
+                li {
+                    font-weight: 500;
+                    margin-top: 20px;
+                    margin-left: 30px;
+                }
+            }
+        }
+        .red_text {
+            color: #f5135c;
+            font-size: 18px;
+            font-family: 'TrebuchetMS';
+            margin-bottom: 90px;
+        }
+    }
+    .snils__how-to {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('../img/depends__main.png');
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+        min-height: 688px;
+        width: 100%;
+        box-shadow: 0px 10px 5px 0px rgba(34, 60, 80, 0.09);
+        .process_depends {
+            color: #ffffff;
+            font-size: 18px;
+            font-family: 'TrebuchetMS';
+            text-align: center;
+            padding-top: 40px;
+            margin-bottom: 60px;
+            max-width: 1100px;
+        }
+        .how_where {
+            font-size: 48px;
+            color: #ffffff;
+        }
+        .two-ways {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 1050px;
+            .working {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #ffffff;
+                font-size: 30px;
+                .working-way {
+                    font-family: 'TrebuchetMS';
+                    font-weight: 300;
+                    font-size: 17px;
+                    width: 395px;
+                    margin-top: 35px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .snils__questions {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-image: url('../img/ask-questions__main.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        min-height: 410px;
+        .ask_managers {
+            font-size: 30px;
+            width: 285px;
+            margin-right: 105px;
+            color: #ffffff;
+            margin-left: 400px;
+        }
+        .questions__form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 285px;
+            margin-top: 30px;
+            font-family: 'TrebuchetMS';
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 5px solid rgba(255, 255, 255, 0.7);
+            outline: 1px solid rgba(72, 92, 123, 0.7);
+            p {
+                width: 240px;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 24px;
+                color: #56575b;
+                text-align: center;
+                margin-top: 40px;
+                padding-bottom: 10px;
+                margin-bottom: 13px;
+                border-bottom: 1px solid #98a1b1;
+                width: 240px;
+            }
+            input, textarea {
+                font-family: 'TrebuchetMS';
+                font-style: italic;
+                padding: 3px 10px;
+                width: 240px;
+                border: 1px solid #98a1b1;
+                margin-bottom: 12px;
+                resize: none;
+            }
+            .question {
+                height: 100px;
+            }
+            button {
+                width: 175px;
+                height: 30px;
+                border-top: 2px solid #bdcbda;
+                color: #ffffff;
+                cursor: pointer;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+            .one {
+                background: linear-gradient(360deg, rgba(71,87,124,1) 0%, rgba(121,148,178,1) 100%);
+            }
+            .two {
+                background: linear-gradient(360deg, rgba(91,114,153,1) 0%, rgba(155,172,198,1) 100%);
+            }
+            .three {
+                background: linear-gradient(360deg, rgba(19,39,72,1) 0%, rgba(32,68,123,1) 100%);
+            }
+        }
+    }
+    .snils__info {
+        margin-top: 65px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p {
+            font-family: 'TrebuchetMS';
+            font-size: 17px;
+            line-height: 27px;
+            font-weight: 500;
+            text-align: center;
+            max-width: 1100px;
+            margin: 50px 0px 90px 0px;
+            color: #2d2d2d;
+        }
+    }
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 405px;
+    width: 100%;
+    background: linear-gradient(360deg, rgba(99,113,142,0.8) 0%, rgba(131,153,187,0.8) 100%), url('../img/footer__main.png');
+    .block__info {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 8px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        color: #ffffff;
+        border-bottom: 1px solid #5a7ba7;
+        flex-wrap: wrap;
+        .header__info__block:first-child {
+            border-left: 2px solid;
+        }
+        .header__info__block {
+            font-family: 'TrebuchetMS';
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            min-width: 200px;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            border-right: 2px solid;
+            border-image-source: linear-gradient(360deg, rgba(0,0,0,0) 0%, rgba(119,119,120,1) 40%, rgba(119,119,120,1) 60%, rgba(0,0,0,0) 100%);
+            border-image-slice: 1;
+            span {
+                border-bottom: 2px solid transparent;
+            }
+            span:hover {
+                border-bottom: 2px solid #f5135c;
+            }
+        }
+    }
+    .two_sections {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 1100px;
+        margin-bottom: 40px;
+        .ask_questions {
+            display: flex;
+            flex-direction: column;
+            font-family: 'TrebuchetMS';
+            font-size: 14px;
+            line-height: 18px;
+            color: #ffffff;
+            span {
+                margin-bottom: 20px;
+            }
+            button {
+                font-family: 'TrebuchetMS';
+                font-size: 14px;
+                width: 155px;
+                height: 30px;
+                margin-top: 25px;
+                color: #ffffff;
+                background-color: #ec2b6a;
+                border-radius: 5px;
+                border: none;
+            }
+            .footer_inputs {
+                display: flex;
+                flex-direction: row;
+                input, textarea {
+                    font-family: 'PlumbCondensed';
+                    padding: 3px 10px;
+                    width: 240px;
+                    border: 1px solid #98a1b1;
+                    font-weight: 300;
+                    margin-bottom: 15.5px;
+                    margin-right: 12px;
+                    resize: none;
+                }
+                .textarea {
+                    height: 100px;
+                }
+                .column_inputs {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+        .snils_su {
+            display: flex;
+            flex-direction: column;
+            .logo {
+                display: flex;
+                flex-direction: row;
+                font-size: 44px;
+                font-weight: 700;
+                color: #ffffff;
+                margin-bottom: 25px;
+                img {
+                    margin-right: 10px;
+                }
+                .red-text {
+                    color: #f5135c;
+                    margin-left: 2px;
+                }
+            }
+            .phones {
+                font-size: 30px;
+                line-height: 40px;
+                color: #ffffff;
+            }
+        }
+    }
+    .faq {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 900px;
+        color: #ffffff;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .header {
+        height: auto;
+        background-image: none;
+        margin-bottom: 30px;
+        .block__info {
+            .header__info__block {
+                border-left: 2px solid;
+            }
+        }
+    }
+    .footer {
+        .block__info {
+            .header__info__block {
+                border-left: 2px solid;
+            }
+        }
+    }
+    .main {
+        .snils__definition {
+            .whats_this {
+                width: 80%;
+                padding: 15px 50px;
+                white-space: inherit;
+            }
+            .snils_uses {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img {
+                    margin-bottom: 30px;
+                }
+                ul {
+                    width: 80%;
+                }
+            }
+        }
+        .snils__how-to {
+            background-image: url('../img/depends__main-mobile.png');
+            background-color: #6a7f9e;
+            .process_depends {
+                display: none;
+            }
+            .how_where {
+                margin-top: 145px;
+                margin-bottom: 40px;
+            }
+            .two-ways {
+                flex-direction: column;
+                .working {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .snils__questions {
+            background-image: url('../img/ask-questions__main-mobile.png');
+            flex-direction: column;
+            background-color: #6a7f9e;
+            .ask_managers {
+                margin-top: 30px;
+                margin-left: 50px;
+                margin-right: 0px;
+            }
+            .questions__form {
+                position: relative;
+                left: 0px;
+                margin-bottom: 60px;
+            }
+        }
+        .snils__info {
+            width: 100%;
+            align-items: center;
+        }
+    }
+.footer {
+    background-color: #5f6e89;
+    .two_sections {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .faq {
+        flex-direction: column;
+        align-items: center;
+        span {
+            margin-bottom: 10px;
+        }
+    }
+}
+}
+@font-face {
+    font-family: "PlumbCondensed";  
+    src: url("../fonts/plumb_condensed.ttf") format("truetype"); 
+}
+@font-face {
+    font-family: "TrebuchetMS";  
+    src: url("../fonts/trebuchet_ms.ttf") format("truetype"); 
+}
